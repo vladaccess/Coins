@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CryptocurrencyTableViewCell" rowHeight="57" id="KGk-i7-Jjw" customClass="CryptocurrencyTableViewCell" customModule="Coins" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="359" height="57"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="359" height="57"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6wT-Vl-rA3">
+                        <rect key="frame" x="20" y="10" width="50" height="50"/>
+                        <color key="backgroundColor" name="Second"/>
+                        <color key="tintColor" name="Second"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="5b6-L8-GBI"/>
+                            <constraint firstAttribute="height" constant="50" id="jos-pf-52d"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="znv-2y-s1s">
+                        <rect key="frame" x="80" y="13.5" width="42" height="43.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzg-7G-goZ">
+                                <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxi-Wq-ST9">
+                                <rect key="frame" x="0.0" y="25.5" width="42" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="sOf-ST-oY4">
+                        <rect key="frame" x="297" y="13.5" width="42" height="43.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z56-2L-g9e">
+                                <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x72-OS-LAc">
+                                <rect key="frame" x="4.5" y="25.5" width="37.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6wT-Vl-rA3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="65N-fJ-h7j"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="sOf-ST-oY4" secondAttribute="trailing" id="PWG-vz-cJ8"/>
+                    <constraint firstAttribute="bottom" secondItem="6wT-Vl-rA3" secondAttribute="bottom" constant="10" id="cNp-Xs-Bs4"/>
+                    <constraint firstItem="znv-2y-s1s" firstAttribute="centerY" secondItem="6wT-Vl-rA3" secondAttribute="centerY" id="fTv-g1-1dK"/>
+                    <constraint firstItem="sOf-ST-oY4" firstAttribute="centerY" secondItem="znv-2y-s1s" secondAttribute="centerY" id="k4m-N2-Cwd"/>
+                    <constraint firstItem="znv-2y-s1s" firstAttribute="leading" secondItem="6wT-Vl-rA3" secondAttribute="trailing" constant="10" id="ojV-sB-2oa"/>
+                    <constraint firstItem="sOf-ST-oY4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="znv-2y-s1s" secondAttribute="trailing" constant="10" id="pyl-vb-rte"/>
+                    <constraint firstItem="6wT-Vl-rA3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="tH1-XR-o5P"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="changePriceLabel" destination="x72-OS-LAc" id="Q1x-EN-bwu"/>
+                <outlet property="fullNameLabel" destination="gzg-7G-goZ" id="CPZ-xM-dOI"/>
+                <outlet property="iconImageView" destination="6wT-Vl-rA3" id="rIl-5t-bEC"/>
+                <outlet property="priceLabel" destination="Z56-2L-g9e" id="DOs-s9-moV"/>
+                <outlet property="shortNameLabel" destination="xxi-Wq-ST9" id="j5O-Ct-8fM"/>
+            </connections>
+            <point key="canvasLocation" x="155.79710144927537" y="219.97767857142856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Second">
+            <color red="0.1803921568627451" green="0.21176470588235294" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

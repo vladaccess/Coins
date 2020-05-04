@@ -12,7 +12,6 @@ class RootNavigationControllerFactory {
     
     func create() -> RootNavigationController {
         let navigationController = RootNavigationController()
-        navigationController.navigationBar.prefersLargeTitles = true
         navigationController.navigationBar.tintColor = .white
         navigationController.navigationBar.isTranslucent = true
         navigationController.navigationBar.barTintColor = R.color.main()

@@ -57,6 +57,14 @@
 		53E9FA6724604D2700A42D7B /* CryptocurrencyDetailsViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E9FA6624604D2700A42D7B /* CryptocurrencyDetailsViewControllerFactory.swift */; };
 		53E9FA6924604DB000A42D7B /* CryptocurrencyDetailsPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E9FA6824604DB000A42D7B /* CryptocurrencyDetailsPresentation.swift */; };
 		53E9FA6B24604E6800A42D7B /* ShowTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E9FA6A24604E6800A42D7B /* ShowTransition.swift */; };
+		53E9FA70246065B000A42D7B /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E9FA6F246065B000A42D7B /* Quote.swift */; };
+		53E9FA72246065F200A42D7B /* Quote+Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E9FA71246065F200A42D7B /* Quote+Coding.swift */; };
+		53E9FA762460836100A42D7B /* AttributeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E9FA742460836100A42D7B /* AttributeTableViewCell.swift */; };
+		53E9FA772460836100A42D7B /* AttributeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53E9FA752460836100A42D7B /* AttributeTableViewCell.xib */; };
+		53E9FA902460C2F000A42D7B /* CryptocurrencyListInteractorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E9FA8F2460C2F000A42D7B /* CryptocurrencyListInteractorFactory.swift */; };
+		53E9FA922460C45C00A42D7B /* CryptocurrencyCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E9FA912460C45C00A42D7B /* CryptocurrencyCoordinatorFactory.swift */; };
+		53E9FA942460C61B00A42D7B /* MainMenuCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E9FA932460C61B00A42D7B /* MainMenuCoordinatorFactory.swift */; };
+		53E9FA962460CA3400A42D7B /* CryptocurrencyDetailsInteractorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E9FA952460CA3400A42D7B /* CryptocurrencyDetailsInteractorFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +119,14 @@
 		53E9FA6624604D2700A42D7B /* CryptocurrencyDetailsViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptocurrencyDetailsViewControllerFactory.swift; sourceTree = "<group>"; };
 		53E9FA6824604DB000A42D7B /* CryptocurrencyDetailsPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptocurrencyDetailsPresentation.swift; sourceTree = "<group>"; };
 		53E9FA6A24604E6800A42D7B /* ShowTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTransition.swift; sourceTree = "<group>"; };
+		53E9FA6F246065B000A42D7B /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		53E9FA71246065F200A42D7B /* Quote+Coding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quote+Coding.swift"; sourceTree = "<group>"; };
+		53E9FA742460836100A42D7B /* AttributeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeTableViewCell.swift; sourceTree = "<group>"; };
+		53E9FA752460836100A42D7B /* AttributeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttributeTableViewCell.xib; sourceTree = "<group>"; };
+		53E9FA8F2460C2F000A42D7B /* CryptocurrencyListInteractorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptocurrencyListInteractorFactory.swift; sourceTree = "<group>"; };
+		53E9FA912460C45C00A42D7B /* CryptocurrencyCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptocurrencyCoordinatorFactory.swift; sourceTree = "<group>"; };
+		53E9FA932460C61B00A42D7B /* MainMenuCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCoordinatorFactory.swift; sourceTree = "<group>"; };
+		53E9FA952460CA3400A42D7B /* CryptocurrencyDetailsInteractorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptocurrencyDetailsInteractorFactory.swift; sourceTree = "<group>"; };
 		BFAE7A48D50E5F316A7488D3 /* Pods-Coins.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coins.debug.xcconfig"; path = "Target Support Files/Pods-Coins/Pods-Coins.debug.xcconfig"; sourceTree = "<group>"; };
 		DB6567EEB60AAF9C8DBA23A9 /* Pods-Coins.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coins.release.xcconfig"; path = "Target Support Files/Pods-Coins/Pods-Coins.release.xcconfig"; sourceTree = "<group>"; };
 		E2B380A2C3EB20DB13FC7ED9 /* libPods-Coins.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Coins.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -236,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				53BFAF50245DCD5E004AFA3D /* Cryptocurrency.swift */,
+				53E9FA6F246065B000A42D7B /* Quote.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -243,6 +260,7 @@
 		53BFAF52245DCF27004AFA3D /* Factories */ = {
 			isa = PBXGroup;
 			children = (
+				53E9FA8E2460C2DE00A42D7B /* Interactors */,
 				53C05D3B245E2B0F006E17EA /* Generic */,
 				53C05D38245E2AA5006E17EA /* ViewControllers */,
 				53BFAF7B245DDD34004AFA3D /* Views */,
@@ -266,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				53BFAF55245DCFAD004AFA3D /* Cryptocurrency+Coding.swift */,
+				53E9FA71246065F200A42D7B /* Quote+Coding.swift */,
 			);
 			path = Coding;
 			sourceTree = "<group>";
@@ -354,6 +373,8 @@
 			isa = PBXGroup;
 			children = (
 				53BFAF79245DDCE3004AFA3D /* AppCoordinatorBuilder.swift */,
+				53E9FA912460C45C00A42D7B /* CryptocurrencyCoordinatorFactory.swift */,
+				53E9FA932460C61B00A42D7B /* MainMenuCoordinatorFactory.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -484,6 +505,7 @@
 		53E9FA62245EF9EB00A42D7B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				53E9FA732460833C00A42D7B /* Cells */,
 				53E9FA6824604DB000A42D7B /* CryptocurrencyDetailsPresentation.swift */,
 				53E9FA52245E5AE100A42D7B /* CryptocurrencyDetailsViewController.swift */,
 				53E9FA50245E5ADA00A42D7B /* CryptocurrencyDetails.storyboard */,
@@ -497,6 +519,24 @@
 				53E9FA64245EFA2100A42D7B /* CryptocurrencyDetailsInteractor.swift */,
 			);
 			path = Interaction;
+			sourceTree = "<group>";
+		};
+		53E9FA732460833C00A42D7B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				53E9FA742460836100A42D7B /* AttributeTableViewCell.swift */,
+				53E9FA752460836100A42D7B /* AttributeTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		53E9FA8E2460C2DE00A42D7B /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				53E9FA8F2460C2F000A42D7B /* CryptocurrencyListInteractorFactory.swift */,
+				53E9FA952460CA3400A42D7B /* CryptocurrencyDetailsInteractorFactory.swift */,
+			);
+			path = Interactors;
 			sourceTree = "<group>";
 		};
 		72DE5A30FE447783629B5709 /* Pods */ = {
@@ -578,6 +618,7 @@
 			files = (
 				53C05D5E245E4385006E17EA /* CryptocurrencyTableViewCell.xib in Resources */,
 				53C05D3F245E2D06006E17EA /* CryptocurrencyList.storyboard in Resources */,
+				53E9FA772460836100A42D7B /* AttributeTableViewCell.xib in Resources */,
 				53E9FA51245E5ADA00A42D7B /* CryptocurrencyDetails.storyboard in Resources */,
 				53E9FA55245E5E0700A42D7B /* CryptocurrencyList.strings in Resources */,
 				53138044245DE5EE00171D57 /* MainMenuViewController.storyboard in Resources */,
@@ -643,6 +684,7 @@
 				53BFAF7D245DDD39004AFA3D /* WindowFactory.swift in Sources */,
 				53BFAF74245DDC17004AFA3D /* MainMenuViewController.swift in Sources */,
 				53BFAF59245DD0F3004AFA3D /* KeyedDecodingContainer.swift in Sources */,
+				53E9FA902460C2F000A42D7B /* CryptocurrencyListInteractorFactory.swift in Sources */,
 				53BFAF77245DDCB3004AFA3D /* AppCoordinator.swift in Sources */,
 				5385BBE8245DB62300B4560F /* AppDelegate.swift in Sources */,
 				53C05D3A245E2AB5006E17EA /* MainMenuViewControllerFactory.swift in Sources */,
@@ -655,7 +697,10 @@
 				53BFAF83245DDED9004AFA3D /* UITableView+Extenstions.swift in Sources */,
 				53E9FA4C245E53E600A42D7B /* Collection+Extensions.swift in Sources */,
 				53E9FA53245E5AE100A42D7B /* CryptocurrencyDetailsViewController.swift in Sources */,
+				53E9FA70246065B000A42D7B /* Quote.swift in Sources */,
+				53E9FA72246065F200A42D7B /* Quote+Coding.swift in Sources */,
 				53C05D41245E2D0D006E17EA /* CryptocurrencyListViewController.swift in Sources */,
+				53E9FA762460836100A42D7B /* AttributeTableViewCell.swift in Sources */,
 				53C05D4E245E3593006E17EA /* RootNavigationControllerFactory.swift in Sources */,
 				5385BC05245DCC9000B4560F /* CryptocurrencyService.swift in Sources */,
 				5385BC02245DCC6800B4560F /* CryptocurrencyWebService.swift in Sources */,
@@ -668,6 +713,8 @@
 				53BFAF68245DD445004AFA3D /* ConsoleLoggingService+NetworkLogging.swift in Sources */,
 				53C05D5A245E3E67006E17EA /* R.generated.swift in Sources */,
 				53BFAF71245DDA41004AFA3D /* CryptocurrencyService+Models.swift in Sources */,
+				53E9FA962460CA3400A42D7B /* CryptocurrencyDetailsInteractorFactory.swift in Sources */,
+				53E9FA942460C61B00A42D7B /* MainMenuCoordinatorFactory.swift in Sources */,
 				53BFAF5E245DD205004AFA3D /* Context.swift in Sources */,
 				53BFAF61245DD38A004AFA3D /* LoggingService.swift in Sources */,
 				53C05D61245E486A006E17EA /* CryptocurrencyInteractor.swift in Sources */,
@@ -676,6 +723,7 @@
 				53BFAF51245DCD5E004AFA3D /* Cryptocurrency.swift in Sources */,
 				53BFAF66245DD3FE004AFA3D /* NetworkLogging.swift in Sources */,
 				53C05D51245E3694006E17EA /* WindowTransition.swift in Sources */,
+				53E9FA922460C45C00A42D7B /* CryptocurrencyCoordinatorFactory.swift in Sources */,
 				53E9FA6724604D2700A42D7B /* CryptocurrencyDetailsViewControllerFactory.swift in Sources */,
 				53E9FA4E245E573600A42D7B /* CryptocurrencyCoordinator.swift in Sources */,
 				53C05D3D245E2B3F006E17EA /* StoryboardViewControllerFactory.swift in Sources */,

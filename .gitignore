@@ -10,12 +10,11 @@
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-xcuserdata
 profile
 *.moved-aside
 DerivedData
 *.hmap
-xcuserdata/*
+xcuserdata/
 
 
 ## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)

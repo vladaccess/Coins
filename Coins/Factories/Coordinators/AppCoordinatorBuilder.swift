@@ -14,31 +14,26 @@ protocol CoordinatorFactory {
 
 class AppCoordinatorBuilder {
     
-    private let context: Context
+    private let contextFactory: ContextFactory
     
     init(_ contextFactory: ContextFactory) {
-        context = contextFactory.build()
+        self.contextFactory = contextFactory
     }
     
     func createAppCoordinator() -> AppCoordinator {
         let cryptocurrencyNavigationViewController = RootNavigationControllerFactory().create()
-        let cryptocurrencyViewController = CryptocurrencyListViewControllerFactory().create()
-        cryptocurrencyNavigationViewController.viewControllers = [cryptocurrencyViewController]
-        
+                
         let mainMenuController = MainMenuViewControllerFactory().create()
         mainMenuController.cryptocurrencyListViewController = cryptocurrencyNavigationViewController
         mainMenuController.viewControllers = [cryptocurrencyNavigationViewController]
         
-        let cryptocurrencyInteractor = CryptocurrencyListInteractor(cryptocurrencyService: context.cryptocurrencyService, presentation: cryptocurrencyViewController, priceFormatter: NumberFormatter.cryptocurrencyPriceFormatter)
-        let cryptocurrencyCoordinator = CryptocurrencyCoordinator(cryptocurrencyInteraction: cryptocurrencyInteractor, navigationController: cryptocurrencyNavigationViewController)
-        cryptocurrencyInteractor.delegate = cryptocurrencyCoordinator
+        let cryptocurrencyCoordinatorFactory = CryptocurrencyCoordinatorFactory(context: contextFactory.build(with: cryptocurrencyNavigationViewController))
         
-        let windowTransition = WindowTransition(viewController: mainMenuController, window: WindowFactory().create())
-        let mainMenuCoordinator = MainMenuCoordinator(show: windowTransition)
+        let mainMenuCoordinatorFactory = MainMenuCoordinatorFactory(mainMenuViewController: mainMenuController)
+
         
-        cryptocurrencyViewController.delegate = cryptocurrencyInteractor
-        
-        return AppCoordinator(context: context, cryptocurrencyCoordinator: cryptocurrencyCoordinator, mainMenuCoordinator: mainMenuCoordinator)
+        return AppCoordinator(cryptocurrencyCoordinatorFactory: cryptocurrencyCoordinatorFactory,
+                              mainMenuCoordinatorFactory: mainMenuCoordinatorFactory)
     }
 }
 

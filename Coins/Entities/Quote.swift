@@ -1,5 +1,5 @@
 //
-//  CryptocurrencyDetailsPresentation.swift
+//  Quote.swift
 //  Coins
 //
 //  Created by Krasnokutskii Vladislav Nikolaevich on 04.05.2020.
@@ -8,6 +8,9 @@
 
 import Foundation
 
-protocol CryptocurrencyDetailsPresentation: AnyObject {
-    func set(models: [AttributeViewModel])
+struct Quote {
+    let price: Double
+    let change24: Double
+    let marketCap: Double
+    let volume24h: Double
 }

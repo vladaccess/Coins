@@ -31,8 +31,9 @@ class ContextFactory {
     
     private lazy var cryptocurrencyService = CryptocurrencyWebService(session: session, logger: loggingService)
     
-    func build() -> Context {
-        return Context(cryptocurrencyService: cryptocurrencyService)
+    func build(with navigationController: UINavigationController) -> Context {
+        return Context(cryptocurrencyService: cryptocurrencyService,
+                       navigationViewController: navigationController)
     }
     
 }

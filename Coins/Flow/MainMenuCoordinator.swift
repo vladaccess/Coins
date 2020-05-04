@@ -9,7 +9,8 @@
 import Foundation
 
 class MainMenuCoordinator {
-    let show: Transition
+    
+    private let show: Transition
     
     init(show: Transition) {
         self.show = show

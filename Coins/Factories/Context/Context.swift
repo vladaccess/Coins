@@ -6,10 +6,16 @@
 //  Copyright © 2020 OrgName. All rights reserved.
 //
 
+import UIKit
+
 class Context {
-    let cryptocurrencyService: CryptocurrencyService
     
-    init(cryptocurrencyService: CryptocurrencyService) {
+    let cryptocurrencyService: CryptocurrencyService
+    let navigationViewController: UINavigationController
+    
+    init(cryptocurrencyService: CryptocurrencyService,
+         navigationViewController: UINavigationController) {
         self.cryptocurrencyService = cryptocurrencyService
+        self.navigationViewController = navigationViewController
     }
 }

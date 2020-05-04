@@ -10,8 +10,8 @@ import UIKit
 
 class ShowTransition: Transition {
     
-    let presenterViewController: UINavigationController
-    let presentingViewController: UIViewController
+    private let presenterViewController: UINavigationController
+    private let presentingViewController: UIViewController
     
     init(presenterViewController: UINavigationController, presentingViewController: UIViewController) {
         self.presenterViewController = presenterViewController

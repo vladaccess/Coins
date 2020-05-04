@@ -12,24 +12,25 @@ class AppCoordinator {
     
     //MARK: - Private Properties
     
-    private let context: Context
-    private let cryptocurrencyCoordinator: Interactable
-    private let mainMenuCoordinator: Interactable
+    let cryptocurrencyCoordinatorFactory: CryptocurrencyCoordinatorFactory
+    var cryptocurrencyCoordinator: Interactable?
+    let mainMenuCoordinatorFactory: MainMenuCoordinatorFactory
+    var mainMenuCoordinator: Interactable?
     
     //MARK: - Init
     
-    init(context: Context,
-         cryptocurrencyCoordinator: Interactable,
-         mainMenuCoordinator: Interactable) {
-        self.context = context
-        self.cryptocurrencyCoordinator = cryptocurrencyCoordinator
-        self.mainMenuCoordinator = mainMenuCoordinator
+    init(cryptocurrencyCoordinatorFactory: CryptocurrencyCoordinatorFactory,
+         mainMenuCoordinatorFactory: MainMenuCoordinatorFactory) {
+        self.cryptocurrencyCoordinatorFactory = cryptocurrencyCoordinatorFactory
+        self.mainMenuCoordinatorFactory = mainMenuCoordinatorFactory
     }
 }
 
 extension AppCoordinator: Interactable {
     func start() {
-        mainMenuCoordinator.start()
-        cryptocurrencyCoordinator.start()
+        mainMenuCoordinator = mainMenuCoordinatorFactory.create()
+        mainMenuCoordinator?.start()
+        cryptocurrencyCoordinator = cryptocurrencyCoordinatorFactory.create()
+        cryptocurrencyCoordinator?.start()
     }
 }

@@ -12,6 +12,6 @@ struct Cryptocurrency {
     let id: Int
     let symbol: String
     let title: String
-    let price: Double
-    let change24: Double
+    let availableSupply: Double
+    let quote: Quote
 }

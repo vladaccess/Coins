@@ -22,6 +22,7 @@ class CryptocurrencyListInteractor {
     private let cryptocurrencyService: CryptocurrencyService
     private let priceFormatter: NumberFormatter
     private var cryptocurrency = [Cryptocurrency]()
+    let show: Transition
     
     weak var delegate: CryptocurrencyListInteractionDelegate?
 
@@ -29,14 +30,16 @@ class CryptocurrencyListInteractor {
     
     init(cryptocurrencyService: CryptocurrencyService,
          presentation: CryptocurrencyListPresentation,
-         priceFormatter: NumberFormatter) {
+         priceFormatter: NumberFormatter,
+         show: Transition) {
         self.presentation = presentation
         self.cryptocurrencyService = cryptocurrencyService
         self.priceFormatter = priceFormatter
+        self.show = show
     }
     
     func updateViews(for cryptocurrency: [Cryptocurrency]) {
-        let models = cryptocurrency.map { CryptocurrencyViewModel(shortName: $0.symbol, fullName: $0.title, price: priceFormatter.string(from: NSNumber(value: $0.price)), changes: "\($0.change24) %") }
+        let models = cryptocurrency.map { CryptocurrencyViewModel(shortName: $0.symbol, fullName: $0.title, price: priceFormatter.string(from: NSNumber(value: $0.quote.price)), changes: "\($0.quote.change24) %") }
         
         presentation.set(models: models)
     }
@@ -44,6 +47,8 @@ class CryptocurrencyListInteractor {
 
 extension CryptocurrencyListInteractor: Interactable {
     func start() {
+        show.perform()
+        
         loadListCryptocurrency()
     }
 }

@@ -9,29 +9,29 @@
 import UIKit
 
 class CryptocurrencyCoordinator {
+        
+    let cryptocurrencyListInteractorFactory: CryptocurrencyListInteractorFactory
+    var cryptocurrencyListInteractor: Interactable?
+    let cryptocurrencyDetailsInteractorFactory: CryptocurrencyDetailsInteractorFactory
+    var cryptocurrencyDetailsInteractor: Interactable?
     
-    private let cryptocurrencyInteraction: Interactable
-    
-    private let navigationController: UINavigationController
-    
-    init(cryptocurrencyInteraction: Interactable, navigationController: UINavigationController) {
-        self.cryptocurrencyInteraction = cryptocurrencyInteraction
-        self.navigationController = navigationController
+    init(cryptocurrencyListInteractorFactory: CryptocurrencyListInteractorFactory,
+         cryptocurrencyDetailsInteractorFactory: CryptocurrencyDetailsInteractorFactory) {
+        self.cryptocurrencyListInteractorFactory = cryptocurrencyListInteractorFactory
+        self.cryptocurrencyDetailsInteractorFactory = cryptocurrencyDetailsInteractorFactory
     }
 }
 
 extension CryptocurrencyCoordinator: Interactable {
     func start() {
-        cryptocurrencyInteraction.start()
+        cryptocurrencyListInteractor = cryptocurrencyListInteractorFactory.create(delegate: self)
+        cryptocurrencyListInteractor?.start()
     }
 }
 
 extension CryptocurrencyCoordinator: CryptocurrencyListInteractionDelegate {
     func startDidSelectCryptocurrency(with cryptocurrency: Cryptocurrency) {
-        let cryptocurrencyDetailsViewController = CryptocurrencyDetailsViewControllerFactory().create()
-        let show = ShowTransition(presenterViewController: navigationController, presentingViewController: cryptocurrencyDetailsViewController)
-        let cryptocurrencyDetailsInteractor = CryptocurrencyDetailsInteractor(cryptocurrencyId: cryptocurrency.id, presentation: cryptocurrencyDetailsViewController, show: show)
-        
-        cryptocurrencyDetailsInteractor.start()
+        cryptocurrencyDetailsInteractor = cryptocurrencyDetailsInteractorFactory.create(with: cryptocurrency)
+        cryptocurrencyDetailsInteractor?.start()
     }
 }

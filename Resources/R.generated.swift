@@ -160,10 +160,20 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
   struct nib {
+    /// Nib `AttributeTableViewCell`.
+    static let attributeTableViewCell = _R.nib._AttributeTableViewCell()
     /// Nib `CryptocurrencyTableViewCell`.
     static let cryptocurrencyTableViewCell = _R.nib._CryptocurrencyTableViewCell()
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "AttributeTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.attributeTableViewCell) instead")
+    static func attributeTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.attributeTableViewCell)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UINib(name: "CryptocurrencyTableViewCell", in: bundle)`
@@ -173,6 +183,10 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    static func attributeTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> AttributeTableViewCell? {
+      return R.nib.attributeTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? AttributeTableViewCell
+    }
+
     static func cryptocurrencyTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CryptocurrencyTableViewCell? {
       return R.nib.cryptocurrencyTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CryptocurrencyTableViewCell
     }
@@ -180,8 +194,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 2 reuse identifiers.
   struct reuseIdentifier {
+    /// Reuse identifier `AttributeTableViewCell`.
+    static let attributeTableViewCell: Rswift.ReuseIdentifier<AttributeTableViewCell> = Rswift.ReuseIdentifier(identifier: "AttributeTableViewCell")
     /// Reuse identifier `CryptocurrencyTableViewCell`.
     static let cryptocurrencyTableViewCell: Rswift.ReuseIdentifier<CryptocurrencyTableViewCell> = Rswift.ReuseIdentifier(identifier: "CryptocurrencyTableViewCell")
 
@@ -251,6 +267,20 @@ struct _R: Rswift.Validatable {
 
   #if os(iOS) || os(tvOS)
   struct nib {
+    struct _AttributeTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = AttributeTableViewCell
+
+      let bundle = R.hostingBundle
+      let identifier = "AttributeTableViewCell"
+      let name = "AttributeTableViewCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> AttributeTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? AttributeTableViewCell
+      }
+
+      fileprivate init() {}
+    }
+
     struct _CryptocurrencyTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
       typealias ReusableType = CryptocurrencyTableViewCell
 
